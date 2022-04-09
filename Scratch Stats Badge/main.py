@@ -1,5 +1,5 @@
 from requests import get
-from flask import Flask, request
+from flask import Flask, request, Response
 from flask_cors import CORS
 from API import get_user_data, get_studio_data, get_project_data
 
@@ -23,7 +23,10 @@ def user():
     arguments = request.args
     username = arguments.get("username", default="", type=str)
     if username == "":
-        return get(f"https://img.shields.io/static/v1?label=Error&message=Username not given!&color=red&style=flat&labelColor=white").content
+        response = Response(get(
+            f"https://img.shields.io/static/v1?label=Error&message=Username not given!&color=red&style=flat&labelColor=white").content)
+        response.headers['Content-Type'] = 'image/svg+xml'
+        return response
     type = arguments.get("data", default="username", type=str)
     label = arguments.get(
         "label", default=f"{username}'s {type} data:", type=str)
@@ -32,8 +35,14 @@ def user():
     style = arguments.get("style", default="flat", type=str)
     data = get_user_data(username, type)
     if data is False:
-        return get(f"https://img.shields.io/static/v1?label=Error&message=An error occurred! Check if the user exists...&color=red&style=flat&labelColor=white").content
-    return get(f"https://img.shields.io/static/v1?label={label}&message={data}&color={color}&style={style}&labelColor={label_color}").content
+        response = Response(get(
+            f"https://img.shields.io/static/v1?label=Error&message=An error occurred! Check if the user exists...&color=red&style=flat&labelColor=white").content)
+        response.headers['Content-Type'] = 'image/svg+xml'
+        return response
+    response = Response(get(
+        f"https://img.shields.io/static/v1?label={label}&message={data}&color={color}&style={style}&labelColor={label_color}").content)
+    response.headers['Content-Type'] = 'image/svg+xml'
+    return response
 
 
 @app.route("/studio")
@@ -41,7 +50,10 @@ def studio():
     arguments = request.args
     studio = arguments.get("id", default="", type=str)
     if studio == "":
-        return get(f"https://img.shields.io/static/v1?label=Error&message=Studio ID not given!&color=red&style=flat&labelColor=white").content
+        response = Response(get(
+            f"https://img.shields.io/static/v1?label=Error&message=Studio ID not given!&color=red&style=flat&labelColor=white").content)
+        response.headers['Content-Type'] = 'image/svg+xml'
+        return response
     type = arguments.get("data", default="title", type=str)
     label = arguments.get(
         "label", default=f"Studio {studio}'s {type} data:", type=str)
@@ -50,8 +62,14 @@ def studio():
     style = arguments.get("style", default="flat", type=str)
     data = get_studio_data(studio, type)
     if data is False:
-        return get(f"https://img.shields.io/static/v1?label=Error&message=An error occurred! Check if the studio exists...&color=red&style=flat&labelColor=white").content
-    return get(f"https://img.shields.io/static/v1?label={label}&message={data}&color={color}&style={style}&labelColor={label_color}").content
+        response = Response(get(
+            f"https://img.shields.io/static/v1?label=Error&message=An error occurred! Check if the studio exists...&color=red&style=flat&labelColor=white").content)
+        response.headers['Content-Type'] = 'image/svg+xml'
+        return response
+    response = Response(get(
+        f"https://img.shields.io/static/v1?label={label}&message={data}&color={color}&style={style}&labelColor={label_color}").content)
+    response.headers['Content-Type'] = 'image/svg+xml'
+    return response
 
 
 @app.route("/project")
@@ -59,7 +77,10 @@ def project():
     arguments = request.args
     project = arguments.get("id", default="", type=str)
     if project == "":
-        return get(f"https://img.shields.io/static/v1?label=Error&message=Project ID not given!&color=red&style=flat&labelColor=white").content
+        response = Response(get(
+            f"https://img.shields.io/static/v1?label=Error&message=Project ID not given!&color=red&style=flat&labelColor=white").content)
+        response.headers['Content-Type'] = 'image'
+        return response
     type = arguments.get("data", default="title", type=str)
     label = arguments.get(
         "label", default=f"Project {project}'s {type} data:", type=str)
@@ -68,8 +89,14 @@ def project():
     style = arguments.get("style", default="flat", type=str)
     data = get_project_data(project, type)
     if data is False:
-        return get(f"https://img.shields.io/static/v1?label=Error&message=An error occurred! Check if the project exists...&color=red&style=flat&labelColor=white").content
-    return get(f"https://img.shields.io/static/v1?label={label}&message={data}&color={color}&style={style}&labelColor={label_color}").content
+        response = Response(get(
+            f"https://img.shields.io/static/v1?label=Error&message=An error occurred! Check if the project exists...&color=red&style=flat&labelColor=white").content)
+        response.headers['Content-Type'] = 'image/svg+xml'
+        return response
+    response = Response(get(
+        f"https://img.shields.io/static/v1?label={label}&message={data}&color={color}&style={style}&labelColor={label_color}").content)
+    response.headers['Content-Type'] = 'image/svg+xml'
+    return response
 
 
 app.run(host='0.0.0.0', port=8080, debug=True)
