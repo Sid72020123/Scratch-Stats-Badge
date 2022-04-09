@@ -90,6 +90,17 @@ Create customized Badges with stats of Scratch User, Studio or Project. Use thos
 ![Image](https://scratch-stats-badge.sid72020123.repl.co/project?id=104&data=loves&label=Project_Loves&style=social)
 
 ## Styles-and-Labels
+Try the following parameters for style and labels:
+* ```label``` - The label or the main title
+* ```color``` - The background color of the data part. You can give any color and hex values(but without the '#' sign)
+* ```label_color``` - The background color of the label part. You can give any color and hex values(but without the '#' sign)
+* ```style``` - The style of the badge. You can set it to anyone from: ```flat```, ```plastic```, ```flat-square```, ```for-the-badge```, ```social```
 
 ## Note
 Some of the data is taken from Scratch DB made by [DatOneLefty](https://scratch.mit.edu/users/DatOneLefty/) on Scratch. The data is not always updated.
+
+# Credits
+This project is made by [Sid72020123](https://scratch.mit.edu/users/Sid72020123/) on Scratch.
+Scratch DB made by [DatOneLefty](https://scratch.mit.edu/users/DatOneLefty/) on Scratch.
+
+**Main credits to [Shields.io](https://shields.io/) for the badges and their styles.**
