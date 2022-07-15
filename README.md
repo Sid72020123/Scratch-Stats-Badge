@@ -66,7 +66,7 @@ Create customized Badges with stats of Scratch User, Studio or Project. Use thos
 #### Examples
 ![Image](https://scratch-stats-badge.sid72020123.repl.co/studio?id=100&data=title&label=Studio%20Title&color=blue&style=flat-square)
 
-![Image](https://scratch-stats-badge.sid72020123.repl.co/studio?id=100&data=followers&label=Studio%27s%20Followers)
+![Image](https://scratch-stats-badge.sid72020123.repl.co/studio?id=100&data=loves&label=Studio%27s%20Loves)
 
 ## Project Badge
 **Endpoint URL: https://scratch-stats-badge.sid72020123.repl.co/project?id=:id**
