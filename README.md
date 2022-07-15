@@ -4,7 +4,7 @@ Create customized Badges with stats of Scratch User, Studio or Project. Use thos
 # Examples
 ![Griffpatch Followers](https://scratch-stats-badge.sid72020123.repl.co/user?username=griffpatch&data=followers&label=Griffpatch%20Followers)
 
-![Griffpatch Messages](https://scratch-stats-badge.sid72020123.repl.co/user?username=griffpatch&data=messages&label=Griffpatch%20Messages&color=blue&style=flat-square)
+![TimMcCool Followers](https://scratch-stats-badge.sid72020123.repl.co/user?username=TimMcCool&data=followers&label=TimMcCool%20Followers&color=blue&style=for-the-badge)
 
 ![Chiroyce Followers](https://scratch-stats-badge.sid72020123.repl.co/user?username=Chiroyce&data=followers&label=Chiroyce%20Followers&style=social)
 
@@ -41,7 +41,7 @@ Create customized Badges with stats of Scratch User, Studio or Project. Use thos
 * [More optional parameters and styling options](#styles-and-labels)
 
 #### Examples
-![Image](https://scratch-stats-badge.sid72020123.repl.co/user?username=griffpatch&data=messages&label=Griffpatch%20Messages&color=blue&style=flat-square)
+![Image](https://scratch-stats-badge.sid72020123.repl.co/user?username=griffpatch&data=following&label=Griffpatch%20Following&color=blue&style=flat-square)
 
 ![Image](https://scratch-stats-badge.sid72020123.repl.co/user?username=Sid72020123&data=followers&label=Sid72020123%27s%20Followers)
 
